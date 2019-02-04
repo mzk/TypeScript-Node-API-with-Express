@@ -7,7 +7,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const api = __importStar(require("api"));
+const api = __importStar(require("./api"));
 exports.register = (app) => {
     const oidc = app.locals.oidc;
     // define a route handler for the default home page

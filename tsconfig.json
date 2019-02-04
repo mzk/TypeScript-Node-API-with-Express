@@ -83,5 +83,8 @@
   },
   "include": [
     "src/**/*"
+  ],
+  "exclude": [
+    "src/public"
   ]
 }
