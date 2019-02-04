@@ -1,3 +1,4 @@
+import * as api from 'api';
 import * as express from 'express';
 
 export const register = (app: express.Application) => {
@@ -25,4 +26,6 @@ export const register = (app: express.Application) => {
         const user = req.userContext ? req.userContext.userinfo : null;
         res.render('guitars', {isAuthenticated: req.isAuthenticated(), user});
     });
+
+    api.register(app);
 };
