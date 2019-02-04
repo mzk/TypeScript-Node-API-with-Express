@@ -14,7 +14,7 @@ const dotenv_1 = __importDefault(require("dotenv"));
 const express_1 = __importDefault(require("express"));
 const path_1 = __importDefault(require("path"));
 const sessionAuth = __importStar(require("./middleware/sessionAuth"));
-const routes = __importStar(require("./routes/index"));
+const routes = __importStar(require("./routes"));
 // initialize configuration
 dotenv_1.default.config();
 // port is now available to the Node.js runtime
@@ -24,7 +24,9 @@ const app = express_1.default();
 // Configure Express to use EJS
 app.set('views', path_1.default.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+// Configure session auth
 sessionAuth.register(app);
+// Configure routes
 routes.register(app);
 // start the express server
 app.listen(port, () => {
