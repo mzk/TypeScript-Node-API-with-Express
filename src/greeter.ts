@@ -1,9 +1,9 @@
-export {}
+export {};
 // greeter.ts
 function greeter(person: string) {
-    return `Hello ${person}!`
+    return `Hello ${person}!`;
 }
 
-const name = 'Node Hero'
+const name = 'Node Hero';
 
-console.log(greeter(name))
+console.log(greeter(name));
